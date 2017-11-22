@@ -2,7 +2,7 @@ import {browser, element, by, By, $, $$, ExpectedConditions, ElementFinder} from
 import protractor = require('protractor');
 import { values } from '@uirouter/angularjs';
 
-describe('Fruit Homepage', () => {
+describe('plant Homepage', () => {
 
     beforeEach(() => {
         browser.get('/'); // get baseUrl fom conf.js
@@ -29,8 +29,8 @@ describe('Fruit Homepage', () => {
             expect(passwordTxt).toContain('Otey');
         });
     });
-    it('Should check that fruit-list page is being visited', () => {
-        let fruitListPage: string = '#!/fruit-list';
+    it('Should check that plant-list page is being visited', () => {
+        let plantListPage: string = '#!/plant-list';
         let username = $('input[name="txtLogin"]');
         let password = $('input[name="txtPassword"]');
         // Clear input fields, then pass in username and password for Sign In
@@ -42,7 +42,7 @@ describe('Fruit Homepage', () => {
         });
         element(by.buttonText('Sign In')).click(); // Click button
         browser.getAllWindowHandles().then(() => {
-            expect(browser.getCurrentUrl()).toContain(fruitListPage);
+            expect(browser.getCurrentUrl()).toContain(plantListPage);
         });
         browser.sleep(1000);
     });
