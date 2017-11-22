@@ -1,0 +1,9 @@
+ "version": "0.0.1",
+ "scripts": {
+    "testserver": "webdriver-manager update && webdriver-manager start",
+    "e2e": "protractor protractor.conf.js || true",
+    "e2etest": "tsc && protractor src/.tmp/protractor.conf.js"
+  },
+ "protractor": "5.2.0",
+  
+  
